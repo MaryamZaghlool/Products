@@ -1,0 +1,18 @@
+<div class="bg-dark container p-5 mt-4 rounded text-light w-50">
+  <h1 class="text-center text-warning">Product {{ productId }} Details</h1>
+  @if (product) {
+  <p class="lead fs-3 mt-2">Product Name : {{ product.name }}</p>
+  <p class="lead fs-3 mt-2">Product price : {{ product.price }}</p>
+  <p class="lead fs-3 mt-2">Product quantity : {{ product.quantity }}</p>
+  }
+  <div class="ms-2">
+    <i class="text-warning bi bi-star-fill px-1"></i>
+    <i class="text-warning bi bi-star-fill px-1"></i>
+    <i class="text-warning bi bi-star-fill px-1"></i>
+    <i class="text-warning bi bi-star-fill px-1"></i>
+    <i class="text-warning bi bi-star-fill px-1"></i>
+  </div>
+  <button class="mt-4 btn btn-primary p-3" [routerLink]="['/products']">
+    Back to Products
+  </button>
+</div>

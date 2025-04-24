@@ -1,0 +1,70 @@
+<div
+  class="cont-form container d-flex align-items-center justify-content-center"
+>
+  <form
+    [formGroup]="productForm"
+    (submit)="productHandler()"
+    class="border rounded-2 p-4 w-50 d-flex flex-column justify-content-center"
+  >
+    <div class="mb-3">
+      <label for="productName" class="form-label">Product Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="productName"
+        name="productName"
+        placeholder="Enter Product Name"
+        aria-describedby="productNameHelp"
+        formControlName="name"
+      />
+      @if(getName.touched){ @if(getName.hasError('required')){
+      <div id="productNameHelp" class="form-text text-danger">
+        Product Name is required
+      </div>
+      } @if(getName.hasError("pattern")){
+      <div id="productNameHelp" class="form-text text-danger">
+        Enter Valid Product Name
+      </div>
+      } }
+    </div>
+    <div class="mb-3">
+      <label for="productPrice" class="form-label">Product Price</label>
+      <input
+        type="number"
+        class="form-control"
+        id="productPrice"
+        name="productPrice"
+        placeholder="Enter Product Price"
+        formControlName="price"
+      />
+      @if(getPrice.touched){ @if(getPrice.hasError('required')){
+      <div id="productPriceHelp" class="form-text text-danger">
+        Product Price is required
+      </div>
+      } @if(getPrice.hasError("min")){
+      <div id="productPriceHelp" class="form-text text-danger">
+        Product Price Must be greater than or equal 10
+      </div>
+      } }
+    </div>
+    <div class="mb-3">
+      <label for="productQuantity" class="form-label">Product Quantity</label>
+      <input
+        type="number"
+        class="form-control"
+        id="productQuantity"
+        name="productQuantity"
+        placeholder="Enter Product Quantity"
+        formControlName="quantity"
+      />
+      @if(getQuantity.touched){ @if(getQuantity.hasError('required')){
+      <div id="productQuantityHelp" class="form-text text-danger">
+        Product Quantity is required
+      </div>
+      } }
+    </div>
+    <button type="submit" class="btn btn-dark mt-3 p-3 m-auto">
+      {{ productId == 0 ? "add New Product" : "Edit Product" }}
+    </button>
+  </form>
+</div>

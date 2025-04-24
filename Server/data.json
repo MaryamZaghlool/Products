@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "name": "pen",
+      "price": 50,
+      "quantity": "15",
+      "id": "2"
+    },
+    {
+      "id": "4",
+      "name": "laptop",
+      "price": 15000,
+      "quantity": 5
+    },
+    {
+      "id": "9634",
+      "name": "Television",
+      "price": 20000,
+      "quantity": 6
+    },
+    {
+      "name": "Computer",
+      "price": 12000,
+      "quantity": "9",
+      "id": "f9c0"
+    },
+    {
+      "id": "75e2",
+      "name": "Book",
+      "price": 55,
+      "quantity": 3
+    }
+  ]
+}
