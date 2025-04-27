@@ -1,12 +1,6 @@
 {
   "products": [
     {
-      "name": "pen",
-      "price": 50,
-      "quantity": "15",
-      "id": "2"
-    },
-    {
       "id": "4",
       "name": "laptop",
       "price": 15000,
@@ -29,6 +23,12 @@
       "name": "Book",
       "price": 55,
       "quantity": 3
+    },
+    {
+      "id": "d1e6",
+      "name": "bag",
+      "price": 90,
+      "quantity": 5
     }
   ]
 }
